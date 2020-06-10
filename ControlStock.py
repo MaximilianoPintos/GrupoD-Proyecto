@@ -6,7 +6,7 @@ from tkinter import filedialog
 import sqlite3
 import datetime
 
-
+#avance 1 
 class Control:
     db_nombre = 'ProyectoMI.py/BaseDeDatos.db'  # Llamado a la base de datos
     # --------------------------------------------------------------------------------------------------------------------------------------------
