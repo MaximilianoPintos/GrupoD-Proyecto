@@ -6,10 +6,12 @@ from datetime import datetime
 import time
 from Ventana_Ventas import *
 from Retiros import Retiro
+from Proveedores import Proveedores
 from tkinter import messagebox
 
 ventas = Ventas()
 retiro = Retiro()
+proveedores = Proveedores()
 
 class Programa:
     def __init__(self):
@@ -157,7 +159,7 @@ class Programa:
         img_boton2 = Image.open("./Iconos/Proveedores.jpg")
         img_boton2.thumbnail((ancho, largo), Image.ANTIALIAS)
         render2 = ImageTk.PhotoImage(img_boton2)
-        boton = Button(frame2,image = render2, text = "Proveedores", compound = "top")#command = proveedores.Inicio
+        boton = Button(frame2,image = render2, text = "Proveedores", compound = "top",command = proveedores.Inicio)
         boton.config(
             font = ("Arial", 14),
             width = 150,

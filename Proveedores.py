@@ -4,7 +4,7 @@ from tkinter import *
 from tkinter import filedialog, messagebox, ttk
 
 
-class proveedores:
+class Proveedores:
 
     db_name = 'BaseDeDatos.db' 
 
