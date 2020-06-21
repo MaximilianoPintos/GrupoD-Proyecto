@@ -14,7 +14,7 @@ date = datetime.datetime.now() # Fecha/Hora
 class Reportes:
     def __init__(self):
         self.titulo = "Reportes"
-        #self.icono = "Proyecto/Iconos/Registradora.ico"
+        self.icono = "./Iconos/Registradora.ico"
         self.resizable = False
         self.color = "#83D6A8"
 
@@ -27,14 +27,14 @@ class Reportes:
         # Tamaño de la ventana
         ox, oy = ventana_reporte.winfo_screenwidth(
         )/5, ventana_reporte.winfo_screenheight()/5
-        ventana_reporte.geometry("=520x400+%d+%d" % (ox-150, oy-30))
+        ventana_reporte.geometry("=520x400+%d+%d" % (ox--140, oy-30))
         # Bloquear el tamaño
         if (self.resizable):
             ventana_reporte.resizable(1, 1)
         else:
             ventana_reporte.resizable(0, 0)
         # Agregar Icono
-        #ventana_reporte.iconbitmap(self.icono)
+        ventana_reporte.iconbitmap(self.icono)
         # Configuraciones
         self.ventana_reporte.config(
             bg=self.color

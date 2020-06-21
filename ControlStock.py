@@ -6,19 +6,21 @@ import sqlite3
 import datetime
 
 
-class Control:
+class Productos:
     db_nombre = 'BaseDeDatos.db'  # Llamado a la base de datos
     # --------------------------------------------------------------------------------------------------------------------------------------------
-    def __init__(self):
+    def Inicio(self):
         ventana_stock = Tk()
         ventana_stock.config(bg="#83D6A8")
         ventana_stock.resizable(0, 0)
         ventana_stock.title("Control de Stock")
+        self.icono = "./Iconos/Registradora.ico"
+        ventana_stock.iconbitmap(self.icono)
 
         # ------------ Centrado de Ventana en pantalla ------------
         ox, oy = ventana_stock.winfo_screenwidth(
         )/2, ventana_stock.winfo_screenheight()/2
-        ventana_stock.geometry("=1260x580+%d+%d" % (ox-550, oy-300))
+        ventana_stock.geometry("=1260x580+%d+%d" % (ox-600, oy-300))
         # ---------------------------------------------------------
                     
         # ---------------- Frame Cargar Productos ----------------------------------------------------------------------

@@ -7,11 +7,15 @@ import time
 from Ventana_Ventas import *
 from Retiros import Retiro
 from Proveedores import Proveedores
+from Reporte import Reportes
+from ControlStock import Productos
 from tkinter import messagebox
 
 ventas = Ventas()
 retiro = Retiro()
 proveedores = Proveedores()
+reportes = Reportes()
+productos = Productos()
 
 class Programa:
     def __init__(self):
@@ -28,7 +32,7 @@ class Programa:
         ventana_principal.title(self.titulo)
         # Tamaño de la ventana
         ox,oy=ventana_principal.winfo_screenwidth()/5,ventana_principal.winfo_screenheight()/5
-        ventana_principal.geometry("=960x650+%d+%d" % (ox-50,oy-100) )
+        ventana_principal.geometry("=960x650+%d+%d" % (ox-30,oy-100) )
         # Bloquear el tamaño
         if (self.resizable):
             ventana_principal.resizable(1, 1)
@@ -101,7 +105,7 @@ class Programa:
         )
         boton_retiro.place(x = 18, y = 160)
         ############################################################
-        boton_reporte = Button(frame1, text="Reportes")#command = reporte.Inicio
+        boton_reporte = Button(frame1, text="Reportes",command = reportes.Inicio)
         boton_reporte.config(
             font=("Arial", 14),
             relief=RAISED,
@@ -175,7 +179,7 @@ class Programa:
         img_boton3 = Image.open("./Iconos/Productos.jpg")
         img_boton3.thumbnail((ancho, largo), Image.ANTIALIAS)
         render3 = ImageTk.PhotoImage(img_boton3)
-        boton = Button(frame2,image = render3, text = "Productos", compound = "top")#command = produtos.Inicio
+        boton = Button(frame2,image = render3, text = "Productos", compound = "top",command = productos.Inicio)
         boton.config(
             font = ("Arial", 14),
             width = 150,
