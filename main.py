@@ -8,5 +8,6 @@ from Reporte import *
 from ControlStock import *
 from PIL import Image,ImageTk
 
+#####
 programa = Programa()
 programa.Inicio()
