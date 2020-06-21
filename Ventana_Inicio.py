@@ -1,13 +1,15 @@
 from tkinter import *
+import PIL
 from PIL import Image, ImageTk
 from datetime import date
 from datetime import datetime
 import time
 from Ventana_Ventas import *
+from Retiros import Retiro
 from tkinter import messagebox
 
 ventas = Ventas()
-
+retiro = Retiro()
 
 class Programa:
     def __init__(self):
@@ -86,7 +88,7 @@ class Programa:
         label_imagen.place(x=0, y=0)
         
         #################  Botones Frame1 ############################
-        boton_retiro = Button(frame1, text="Retiro")#command = retiro.Inicio
+        boton_retiro = Button(frame1, text="Retiro", command = retiro.Inicio)
         boton_retiro.config(
             font=("Arial", 14),
             relief=RAISED,

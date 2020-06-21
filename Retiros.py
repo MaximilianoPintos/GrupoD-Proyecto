@@ -10,7 +10,7 @@ class Retiro:
 
     bd_name = 'BaseDeDatos.db'
 
-    def Iniciar(self):
+    def Inicio(self):
         self.titulo = "Retiros"
         #self.icono = "Proyecto/Iconos/Registradora.ico"
         self.resizable = False
