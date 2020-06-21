@@ -6,6 +6,7 @@ from Retiros import *
 from Proveedores import *
 from Reporte import *
 from ControlStock import *
+from UltimosMov import *
 from PIL import Image,ImageTk
 
 #####

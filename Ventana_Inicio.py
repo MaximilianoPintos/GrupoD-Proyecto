@@ -9,6 +9,7 @@ from Retiros import Retiro
 from Proveedores import Proveedores
 from Reporte import Reportes
 from ControlStock import Productos
+from UltimosMov import Movimientos
 from tkinter import messagebox
 
 ventas = Ventas()
@@ -16,6 +17,7 @@ retiro = Retiro()
 proveedores = Proveedores()
 reportes = Reportes()
 productos = Productos()
+movimientos = Movimientos()
 
 class Programa:
     def __init__(self):
@@ -211,7 +213,7 @@ class Programa:
         img_boton6 = Image.open("./Iconos/Ultimos Movimientos.jpg")
         img_boton6.thumbnail((ancho, largo), Image.ANTIALIAS)
         render6 = ImageTk.PhotoImage(img_boton6)
-        boton = Button(frame2,image = render6,text = "Movimientos",compound = "top")#command =movimientos.Inicio 
+        boton = Button(frame2,image = render6,text = "Movimientos",compound = "top",command =movimientos.Inicio)
         boton.config(
             font = ("Arial", 14),
             width = 150,

@@ -7,13 +7,13 @@ import datetime
 
 class Movimientos:
     db_nombre = 'BaseDeDatos.db'  # Llamado a la base de datos
-    def __init__(self):
+    def Inicio(self):
         movimientos = Tk()
         movimientos.config(bg="#83D6A8")
         movimientos.resizable(0, 0)
         movimientos.title("Ultimos movimientos")
-        #self.icono = "Proyecto/Iconos/Registradora.ico"
-        #movimientos.iconbitmap(self.icono)
+        self.icono = "./Iconos/Registradora.ico"
+        movimientos.iconbitmap(self.icono)
 
         # ------------ Centrado de Ventana en pantalla ------------
         ox, oy = movimientos.winfo_screenwidth(
