@@ -11,12 +11,14 @@ class Proveedores:
     def Inicio(self):
         # Ventana principal                                                
         ventana = Tk()
-        #self.icono = "Proyecto/Iconos/Registradora.ico"
-        #ventana.iconbitmap(self.icono)
+        self.icono = "./Iconos/Registradora.ico"
+        ventana.iconbitmap(self.icono)
         ventana.resizable(0,0)
         ventana.config(bg = "#83D6A8")
         ox, oy = ventana.winfo_screenwidth()/2, ventana.winfo_screenwidth()/2
-        ventana.geometry("=1253x244+%d+%d" % (ox-650, oy-200))
+        ventana.geometry("=1253x244+%d+%d" % (ox-650, oy-450))
+        self.titulo = "Proveedores"
+        ventana.title(self.titulo)
 
         # Creacion de frame contenedor
         frame = LabelFrame(ventana, text = 'Carga proveedor: ')

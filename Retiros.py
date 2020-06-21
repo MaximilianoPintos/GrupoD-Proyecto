@@ -12,7 +12,7 @@ class Retiro:
 
     def Inicio(self):
         self.titulo = "Retiros"
-        #self.icono = "Proyecto/Iconos/Registradora.ico"
+        self.icono = "./Iconos/Registradora.ico"
         self.resizable = False
         self.color = "#83D6A8"
 
@@ -21,7 +21,7 @@ class Retiro:
         self.ventana_retiro = ventana_retiro
 
         # Titulo
-        #ventana_retiro.title(self.titulo)
+        ventana_retiro.title(self.titulo)
 
         # Tamaño de la ventana
         ox, oy = ventana_retiro.winfo_screenwidth()/5, ventana_retiro.winfo_screenheight()/5
@@ -34,7 +34,7 @@ class Retiro:
             ventana_retiro.resizable(0, 0)
 
         # Agregar Icono
-        #ventana_retiro.iconbitmap() #entre los parentecis: self.icono
+        ventana_retiro.iconbitmap(self.icono) 
 
         # Configuraciones
         self.ventana_retiro.config(
