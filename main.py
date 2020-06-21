@@ -7,6 +7,9 @@ from Proveedores import *
 from Reporte import *
 from ControlStock import *
 from UltimosMov import *
+from Acerca_de import *
+from Efectivo_en_caja import *
+from Registro_empleados import *
 from PIL import Image,ImageTk
 
 #####

@@ -2,20 +2,21 @@ from tkinter import *
 
 
 class Registro: 
-
-
     def __init__(self):
         self.titulo = "Registro de empleados"
         self.color = "#83D6A8"
-        self.medidas = "700x400"
+        self.icono = "./Iconos/Registradora.ico"
 
     def Inicio(self):
 
         ventanaRegistro = Tk()
-        ventanaRegistro.geometry(self.medidas)
+        # Tamaño de la ventana
+        ox,oy=ventanaRegistro.winfo_screenwidth()/5,ventanaRegistro.winfo_screenheight()/5
+        ventanaRegistro.geometry("=700x400+%d+%d" % (ox--60,oy-20) )
         ventanaRegistro.title(self.titulo)
         ventanaRegistro.resizable(False, False)
         ventanaRegistro.configure(background = self.color)
+        ventanaRegistro.iconbitmap(self.icono)
 
         #Encabezado
         encabezado = Label(ventanaRegistro, text = "Registro de nuevo empleado" ) 

@@ -9,7 +9,7 @@ class Efectivo:
     db_nombre = 'Proyecto\BaseDatos.db'
     def __init__(self):
         self.titulo = "Dinero"
-        self.icono = "Proyecto/Iconos/Registradora.ico"
+        self.icono = "./Iconos/Registradora.ico"
         self.resizable = False
         self.color = "#83D6A8"
 

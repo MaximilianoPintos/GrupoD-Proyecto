@@ -10,7 +10,11 @@ from Proveedores import Proveedores
 from Reporte import Reportes
 from ControlStock import Productos
 from UltimosMov import Movimientos
+from Acerca_de import AcercaDe
+from Efectivo_en_caja import Efectivo
+from Registro_empleados import Registro
 from tkinter import messagebox
+
 
 ventas = Ventas()
 retiro = Retiro()
@@ -18,6 +22,9 @@ proveedores = Proveedores()
 reportes = Reportes()
 productos = Productos()
 movimientos = Movimientos()
+acercade= AcercaDe()
+efectivo = Efectivo()
+registro = Registro()
 
 class Programa:
     def __init__(self):
@@ -120,7 +127,7 @@ class Programa:
         boton_reporte.place(x = 18, y = 220)
 
         ##############################################################  
-        boton_empleados = Button(frame1, text="Empleados")
+        boton_empleados = Button(frame1, text="Empleados", command = registro.Inicio)
         boton_empleados.config(
             font=("Arial", 14),
             relief=RAISED,
@@ -197,7 +204,7 @@ class Programa:
         img_boton5 = Image.open("./Iconos/Caja Fuerte.png")
         img_boton5.thumbnail((ancho, largo), Image.ANTIALIAS)
         render5 = ImageTk.PhotoImage(img_boton5)
-        boton = Button(frame2,image = render5, text = "Efectivo en Caja", compound = "top")#command = efectivo.Inicio
+        boton = Button(frame2,image = render5, text = "Efectivo en Caja", compound = "top",command = efectivo.Inicio)
         boton.config(
             font = ("Arial", 14),
             width = 150,
@@ -229,7 +236,7 @@ class Programa:
         img_boton8 = Image.open("./Iconos/AcercaDe.png")
         img_boton8.thumbnail((ancho, largo), Image.ANTIALIAS)
         render8 = ImageTk.PhotoImage(img_boton8)
-        boton = Button(frame2,image = render8,text = "Acerca de",compound = "top")#command = acercade.Inicio
+        boton = Button(frame2,image = render8,text = "Acerca de",compound = "top",command = acercade.Inicio)
         boton.config(
             font = ("Arial", 14),
             width = 150,
