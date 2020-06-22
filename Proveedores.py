@@ -6,7 +6,7 @@ from tkinter import filedialog, messagebox, ttk
 
 class Proveedores:
 
-    db_name = 'BaseDeDatos.db' 
+    db_name = 'BaseDatos.db' 
 
     def Inicio(self):
         # Ventana principal                                                

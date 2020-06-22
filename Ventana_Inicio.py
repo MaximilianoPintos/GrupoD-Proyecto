@@ -255,7 +255,7 @@ class Programa:
         texto.place(x = 530,y=75)
         ###################### Fecha y hora ########################
         ###### Fecha #########
-        fecha_actual = datetime.now()
+        fecha_actual = datetime.datetime.now()
         formato = fecha_actual.strftime('Fecha: %d / %m / %Y')
         fecha = Label(frame3, text = formato)
         fecha.config(

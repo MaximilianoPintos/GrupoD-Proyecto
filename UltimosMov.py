@@ -6,7 +6,7 @@ import datetime
 
 
 class Movimientos:
-    db_nombre = 'BaseDeDatos.db'  # Llamado a la base de datos
+    db_nombre = 'BaseDatos.db'  # Llamado a la base de datos
     def Inicio(self):
         movimientos = Tk()
         movimientos.config(bg="#83D6A8")

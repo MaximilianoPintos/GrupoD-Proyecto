@@ -1,12 +1,16 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
-from datetime import date
-from datetime import datetime
+from datetime import *
 import time
 import PIL
 import sqlite3
 from tkinter import messagebox
+from tkinter import filedialog
+import datetime
+import os 
+import random
+
 
 lista_producto = []
 precio_product = []
@@ -14,8 +18,9 @@ cantidad_producto = []
 id_producto = []
 precio_Unitario = []
 descuentos = []
-date = datetime.now()
 
+date = datetime.datetime.now()
+date2= datetime.datetime.now().date()
 class Ventas:
     db_nombre = 'BaseDatos.db'  # Llamado a la base de datos
 
@@ -274,7 +279,7 @@ class Ventas:
 
         # Botones Frame 5
         # Boton Ticket
-        boton_recibo = Button(frame5, text="Generar Recibo")
+        boton_recibo = Button(frame5, text="Generar Recibo", command = self.generar_factura)
         boton_recibo.config(
             bd=3,
             relief=RAISED,
@@ -511,5 +516,41 @@ class Ventas:
                     text= "Descuento:")
                 messagebox.showinfo("Perfecto", "Venta realizada con exito", parent = self.ventana_ventas) 
         except:
-            messagebox.showinfo("Ciudado", "No hay ninguna venta", parent = self.ventana_ventas)   
+            messagebox.showinfo("Ciudado", "No hay ninguna venta", parent = self.ventana_ventas)  
        
+    def generar_factura(self):
+            # Ruta
+        ruta = "C:/Users/Usuario/Desktop/GrupoD-Proyecto/Facturas/" + str(date2)
+        if not os.path.exists(ruta):
+            os.makedirs(ruta)
+
+        # Plantilla
+        empresa = "\t\t\t\tMinimarket de Amigos S.A\n"
+        direccion = "\t\t\t\tMendoza, Argentina\n"
+        contacto = "\t\t\t\tContacto: 2614705854\n\n"
+        factura= "\t\t\t\t\tFactura\n\n"
+        dt="\t\t\t\t\t" + str(date2) + "\n"
+
+        tabla = "\t-----------------------------------------------------------------\n\t\tS.A\t\tProducto\t\tCantidad\t\tPrecio\t\t\t\t\n"
+        tabla2 = "\t-----------------------------------------------------------------"
+        final = empresa + direccion + contacto + factura + dt + "\n" + tabla + tabla2
+
+        # abrir archivo
+        nombre_archivo = str(ruta) + " " +  str(random.randrange(0,9999)) + ".rtf"
+        archivo= open(nombre_archivo, "w")
+        archivo.write(final)
+
+        # factura dinamica
+
+        r = 1
+        i = 0
+        for t in lista_producto:
+            archivo.write("\n\t\t" + str(r) + "\t\t" + str(lista_producto[i]+ "       ")[:15] + "\t\t" + str(cantidad_producto[i]) + "\t\t" + str(precio_product[i]))
+            i += 1
+            r += 1
+        archivo.write("\n\n\n\n\t-----------------------------------------------------------------\n")
+        archivo.write("\n\t\t\t\t\t\t\t\t\tTotal : $ " + str(sum(precio_product)))
+        archivo.write("\n\n\t\t\t\t\t\t\t\tGracias Por Su Compra.\n")
+        archivo.write("\t-----------------------------------------------------------------\n")
+        archivo.close()
+        messagebox.showinfo("Excelente", "Factura Generada Con Exito!", parent = self.ventana_ventas)

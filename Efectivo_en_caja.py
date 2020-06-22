@@ -6,7 +6,7 @@ import PIL
 
 
 class Efectivo:
-    db_nombre = 'Proyecto\BaseDatos.db'
+    db_nombre = 'BaseDatos.db'
     def __init__(self):
         self.titulo = "Dinero"
         self.icono = "./Iconos/Registradora.ico"

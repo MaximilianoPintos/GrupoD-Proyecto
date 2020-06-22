@@ -8,7 +8,7 @@ import time
 
 class Retiro:
 
-    bd_name = 'BaseDeDatos.db'
+    bd_name = 'BaseDatos.db'
 
     def Inicio(self):
         self.titulo = "Retiros"

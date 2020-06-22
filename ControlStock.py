@@ -7,7 +7,7 @@ import datetime
 
 
 class Productos:
-    db_nombre = 'BaseDeDatos.db'  # Llamado a la base de datos
+    db_nombre = 'BaseDatos.db'  # Llamado a la base de datos
     # --------------------------------------------------------------------------------------------------------------------------------------------
     def Inicio(self):
         ventana_stock = Tk()
