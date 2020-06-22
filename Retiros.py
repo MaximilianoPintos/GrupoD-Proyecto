@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from datetime import date
 from datetime import datetime
+from Efectivo_en_caja import *
 import sqlite3
 import time
 
@@ -138,7 +139,6 @@ class Retiro:
             self.nombre_empleado.delete(0, END)
             self.cantidad_retiro.delete(0, END)
             self.ventana_retiro.destroy()
-    
     # Validacion Str
     @staticmethod
     def lee_str(aux_1):
