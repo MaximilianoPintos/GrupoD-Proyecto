@@ -3,6 +3,8 @@ from tkinter import ttk
 import sqlite3
 from PIL import ImageTk, Image
 import PIL
+from Retiros import Retiro
+from numpy import *
 
 
 class Efectivo:
@@ -60,11 +62,11 @@ class Efectivo:
         db = sqlite3.connect(self.db_nombre)
         c = db.cursor()
         c.execute("SELECT SUM(Precio) FROM Ventas")
-        total = c.fetchall()
+        self.total =c.fetchall()
         self.label_marco.config(
             font=("Arial",30,"bold"),
             bg = "#83D6A8",
-            text= total
+            text= self.total
             )
         c.close()
 
