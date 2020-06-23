@@ -12,7 +12,7 @@ class Retiro:
 
     def Inicio(self):
         self.titulo = "Retiros"
-        self.icono = "./Iconos/Registradora.ico"
+        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 

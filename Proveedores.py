@@ -11,12 +11,12 @@ class Proveedores:
     def Inicio(self):
         # Ventana principal                                                
         ventana = Tk()
-        self.icono = "./Iconos/Registradora.ico"
+        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
         ventana.iconbitmap(self.icono)
         ventana.resizable(0,0)
         ventana.config(bg = "#83D6A8")
         ox, oy = ventana.winfo_screenwidth()/2, ventana.winfo_screenwidth()/2
-        ventana.geometry("=1253x244+%d+%d" % (ox-650, oy-450))
+        ventana.geometry("=1300x244+%d+%d" % (ox-650, oy-450))
         self.titulo = "Proveedores"
         ventana.title(self.titulo)
 
@@ -76,7 +76,7 @@ class Proveedores:
 
         # Tabla
         self.tabla = ttk.Treeview(frame_tabla, height = 7, columns = ('#1','#2','#3','#4','#5', '#6'))
-        self.tabla.grid(row = 1, column = 0, columnspan = 2, padx = 10)
+        self.tabla.grid(row = 0, column = 0, columnspan = 2, sticky= W)
         self.tabla.heading('#0', text = 'Fecha', anchor = CENTER)
         self.tabla.heading('#1', text = 'Empresa', anchor = CENTER)
         self.tabla.heading('#2', text = 'CUIT Empresa', anchor = CENTER)
@@ -96,10 +96,10 @@ class Proveedores:
         # Botones
         ttk.Button(frame, text = 'GUARDAR', command = self.cargar_datos).grid(row = 12, column = 1, sticky = W + E)
         boton_editar = ttk.Button(frame_tabla, text = 'EDITAR', command = self.editar)
-        boton_editar.config(width = 77)
+        boton_editar.config(width = 58)
         boton_editar.grid(row = 10, column = 0)
         boton_borrar = ttk.Button(frame_tabla, text = 'BORRAR', command = self.borrar)
-        boton_borrar.config(width = 77)
+        boton_borrar.config(width = 58)
         boton_borrar.grid(row = 10, column = 1)
 
         self.obtener_dato()

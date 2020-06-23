@@ -30,7 +30,7 @@ registro = Registro()
 class Programa:
     def __init__(self):
         self.titulo = "Sistema de ventas"
-        self.icono = "./Iconos/Registradora.ico"
+        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 
@@ -125,7 +125,7 @@ class Programa:
 
         )
 
-        boton_reporte.place(x = 18, y = 220)
+        boton_reporte.place(x = 20, y = 220)
 
         ##############################################################  
         boton_empleados = Button(frame1, text="Empleados", command = registro.Inicio)
@@ -137,7 +137,7 @@ class Programa:
             bd=3
 
         )
-        boton_empleados.place(x = 19, y = 280)
+        boton_empleados.place(x = 21, y = 280)
         ##############################################################  
         boton_salir = Button(frame1, text="Salir", command = quit)
         boton_salir.config(

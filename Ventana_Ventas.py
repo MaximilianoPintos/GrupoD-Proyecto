@@ -27,7 +27,7 @@ class Ventas:
 
     def __init__(self, *args, **kwargs):
         self.titulo = "Ventas"
-        self.icono = "./Iconos/Registradora.ico"
+        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 
@@ -193,7 +193,7 @@ class Ventas:
         boton_agregar_venta = Button(
         self.frame1, text="Agregar", command=self.AgregarVenta)
         boton_agregar_venta.config(
-            width=49,
+            width=52,
             relief=RAISED,
             font=("Arial", 14),
             bd=3,
@@ -216,7 +216,7 @@ class Ventas:
         # Boton Vuelto
         boton_vuelto = Button(self.frame3, text="Calcular vuelto", command = self.PagaCon)
         boton_vuelto.config(
-            width=13,
+            width=11,
             relief=RAISED,
             bd=3,
             font=("Arial", 12),
@@ -234,7 +234,7 @@ class Ventas:
             relief=RAISED,
             bd=3,
             font=("Arial", 15),
-            width=50,
+            width=48,
             cursor="hand2"
         )
         boton_limpiar_vuelto.place(x=0, y=177)
@@ -272,7 +272,7 @@ class Ventas:
         boton_confirmar.config(
             bd=3,
             relief=RAISED,
-            width=24,
+            width=23,
             font=("Arial", 17),
             cursor="hand2"
         )
@@ -284,7 +284,7 @@ class Ventas:
         boton_recibo.config(
             bd=3,
             relief=RAISED,
-            width=24,
+            width=23,
             font=("Arial", 17),
             cursor="hand2"
         )
@@ -294,7 +294,7 @@ class Ventas:
         boton_borrar.config(
             bd=3,
             relief=RAISED,
-            width=24,
+            width=23,
             font=("Arial", 17),
             cursor="hand2"
         )
@@ -305,7 +305,7 @@ class Ventas:
         boton_salir.config(
             bd=3,
             relief=RAISED,
-            width=24,
+            width=23,
             font=("Arial", 17),
             cursor="hand2"
         )

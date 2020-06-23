@@ -5,7 +5,7 @@ class Registro:
     def __init__(self):
         self.titulo = "Registro de empleados"
         self.color = "#83D6A8"
-        self.icono = "./Iconos/Registradora.ico"
+        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
 
     def Inicio(self):
 
