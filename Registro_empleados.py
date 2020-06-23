@@ -147,15 +147,15 @@ class Registro:
             return FALSE
     
     def ejecutar(self, consulta, parametros = ()):
-    with sqlite3.connect(self.db_name) as conn:
-        cursor = conn.cursor()    
-        resultado = cursor.execute(consulta, parametros)
-        conn.commit()
-        return resultado
-    raise Exception('Error')
+        with sqlite3.connect(self.db_name) as conn:
+            cursor = conn.cursor()    
+            resultado = cursor.execute(consulta, parametros)
+            conn.commit()
+            return resultado
+        raise Exception('Error')
     
     def llenar_tabla(self):
-    if self.validarCampos() == TRUE:
-        consulta = 'INSERT INTO Personal VALUES(NULL, ?, ?, ?, ?, ?, ?)'
-        parametros = (self.nombreIn.get(), self.apellidoIn.get(), self.documentoIn.get(), self.telefonoIn.get(), self.correoIn.get(), self.direccionIn.get())
-        self.ejecutar(consulta, parametros)
+        if self.validarCampos() == TRUE:
+            consulta = 'INSERT INTO Personal VALUES(NULL, ?, ?, ?, ?, ?, ?)'
+            parametros = (self.nombreIn.get(), self.apellidoIn.get(), self.documentoIn.get(), self.telefonoIn.get(), self.correoIn.get(), self.direccionIn.get())
+            self.ejecutar(consulta, parametros)
