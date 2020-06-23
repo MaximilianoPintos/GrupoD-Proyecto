@@ -48,7 +48,7 @@ class Registro:
         self.apellidoIn.place(x=200, y=125)
 
         #Documento
-        texto = Label(ventanaRegistro)
+        texto = Label(ventanaRegistro, text= "Documento")
         texto.config(
             bg = "#83D6A8",
             font = "Arial 10 bold"
@@ -58,7 +58,7 @@ class Registro:
         self.documentoIn.place(x=200,y=175)
 
         #Teléfono
-        self.texto = Label(ventanaRegistro)
+        self.texto = Label(ventanaRegistro, text = telefono)
         self.texto.config(
             bg = "#83D6A8",
             font = "Arial 10 bold"
