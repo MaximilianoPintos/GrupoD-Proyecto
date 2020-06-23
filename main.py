@@ -15,5 +15,5 @@ from PIL import Image
 from PIL import ImageTk
 
 #####
-programa = Proveedores()
+programa = Programa()
 programa.Inicio()

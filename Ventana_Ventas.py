@@ -490,8 +490,8 @@ class Ventas:
 
                 #Limpiando tabla
                 records = self.tabla.get_children()
-            for element in records:
-                self.tabla.delete(element)  
+                for element in records:
+                    self.tabla.delete(element)  
                         
                 del(lista_producto[:])
                 del(id_producto[:])
