@@ -141,10 +141,10 @@ class Registro:
 
 
     def validarCampos(self):
-    if (len(self.nombreIn.get()) != 0 and len(self.apellidoIn.get()) != 0 and len(self.documentoIn.get()) != 0 and len(self.telefonoIn.get()) != 0 and len(self.direccionIn.get()) != ):
-        return TRUE
-    else:
-        return FALSE
+        if (len(self.nombreIn.get()) != 0 and len(self.apellidoIn.get()) != 0 and len(self.documentoIn.get()) != 0 and len(self.telefonoIn.get()) != 0 and len(self.direccionIn.get()) != ):
+            return TRUE
+        else:
+            return FALSE
     
     def ejecutar(self, consulta, parametros = ()):
     with sqlite3.connect(self.db_name) as conn:
