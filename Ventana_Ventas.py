@@ -1,9 +1,10 @@
 from tkinter import *
 from tkinter import ttk
-from PIL import ImageTk, Image
+import PIL
+from PIL import Image
+from PIL import ImageTk
 from datetime import *
 import time
-import PIL
 import sqlite3
 from tkinter import messagebox
 from tkinter import filedialog

@@ -10,7 +10,9 @@ from UltimosMov import *
 from Acerca_de import *
 from Efectivo_en_caja import *
 from Registro_empleados import *
-from PIL import Image,ImageTk
+import PIL
+from PIL import Image
+from PIL import ImageTk
 
 #####
 programa = Programa()

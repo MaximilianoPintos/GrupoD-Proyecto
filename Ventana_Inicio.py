@@ -1,6 +1,7 @@
 from tkinter import *
 import PIL
-from PIL import Image, ImageTk
+from PIL import Image
+from PIL import ImageTk
 from datetime import date
 from datetime import datetime
 import time
@@ -14,7 +15,7 @@ from Acerca_de import AcercaDe
 from Efectivo_en_caja import Efectivo
 from Registro_empleados import Registro
 from tkinter import messagebox
-
+# encoding: utf-8
 
 ventas = Ventas()
 retiro = Retiro()
@@ -39,10 +40,10 @@ class Programa:
         self.ventana_principal = ventana_principal
         # Titulo
         ventana_principal.title(self.titulo)
-        # Tamaño de la ventana
+        # Tamano de la ventana
         ox,oy=ventana_principal.winfo_screenwidth()/5,ventana_principal.winfo_screenheight()/5
         ventana_principal.geometry("=960x650+%d+%d" % (ox-30,oy-100) )
-        # Bloquear el tamaño
+        # Bloquear el tamano
         if (self.resizable):
             ventana_principal.resizable(1, 1)
         else:
@@ -64,7 +65,7 @@ class Programa:
             font = ("Arial",14)
         )
         frame1.place(x = 40, y = 120)
-        #Frame Menú
+        #Frame Menu
         frame2 = LabelFrame(self.ventana_principal, text = "Menú de opciones")
         frame2.config(
             bg = "#83D6A8",

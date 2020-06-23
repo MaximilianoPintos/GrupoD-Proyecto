@@ -4,7 +4,6 @@ from datetime import date
 from datetime import datetime
 import sqlite3
 import time
-from numpy import *
 
 
 class Retiro:

@@ -4,7 +4,6 @@ import sqlite3
 from PIL import ImageTk, Image
 import PIL
 from Retiros import Retiro
-from numpy import *
 
 
 class Efectivo:
