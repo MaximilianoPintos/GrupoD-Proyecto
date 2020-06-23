@@ -28,14 +28,13 @@ class Registro:
         encabezado.place(x=175, y=0)
 
         #Nombre 
-        self.texto1 = Label(ventanaRegistro, text = "Nombre:")
+        self.texto1= Label(ventanaRegistro, text = "Nombre:")
         self.texto1.config(
             bg = "#83D6A8",
             font = "Arial 10 bold"
         )
         self.texto1.place(x=50, y=75)
         self.nombreIn = Entry(ventanaRegistro)
-        self.nombreIn.focus()
         self.nombreIn.place(x=200, y=75)
 
 
@@ -48,7 +47,6 @@ class Registro:
         self.texto2.place(x=50, y=125)
 
         self.apellidoIn = Entry(ventanaRegistro)
-        self.apellidoIn.focus()
         self.apellidoIn.place(x=200, y=125)
 
         #Documento
@@ -59,7 +57,6 @@ class Registro:
         )
         self.texto3.place(x=50, y=175)
         self.documentoIn = Entry(ventanaRegistro)
-        self.documentoIn.focus()
         self.documentoIn.place(x=200,y=175)
 
         #Teléfono
@@ -70,7 +67,6 @@ class Registro:
         )
         self.texto4.place(x= 375, y=75)
         self.telefonoIn = Entry(ventanaRegistro)
-        self.telefonoIn.focus()
         self.telefonoIn.place(x=500, y= 75)
 
         #Dirección
@@ -81,7 +77,6 @@ class Registro:
         )
         self.texto5.place(x=375, y=125)
         self.direccionIn = Entry(ventanaRegistro)
-        self.direccionIn.focus()
         self.direccionIn.place(x=500, y=125)
 
         #E-mail
@@ -92,7 +87,6 @@ class Registro:
         )
         self.texto6.place(x=375, y=175)
         self.correoIn = Entry(ventanaRegistro)
-        self.correoIn.focus()
         self.correoIn.place(x=500, y=175)
 
 
