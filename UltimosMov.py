@@ -18,7 +18,7 @@ class Movimientos:
         # ------------ Centrado de Ventana en pantalla ------------
         ox, oy = movimientos.winfo_screenwidth(
         )/2, movimientos.winfo_screenheight()/2
-        movimientos.geometry("=800x490+%d+%d" % (ox-430, oy-300))
+        movimientos.geometry("=800x490+%d+%d" % (ox-380, oy-300))
 
         #################### Tablita ##############################
         espacio = Frame(movimientos)

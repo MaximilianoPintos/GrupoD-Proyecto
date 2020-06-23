@@ -23,7 +23,7 @@ class Efectivo:
         # Tamaño de la ventana
         ox, oy = ventana_efectivo.winfo_screenwidth(
         )/5, ventana_efectivo.winfo_screenheight()/5
-        ventana_efectivo.geometry("=500x250+%d+%d" % (ox--150, oy--30))
+        ventana_efectivo.geometry("=500x250+%d+%d" % (ox--190, oy--60))
         # Bloquear el tamaño
         if (self.resizable):
             ventana_efectivo.resizable(1, 1)
