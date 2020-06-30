@@ -14,7 +14,7 @@ class Productos:
         ventana_stock.config(bg="#83D6A8")
         ventana_stock.resizable(0, 0)
         ventana_stock.title("Control de Stock")
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         ventana_stock.iconbitmap(self.icono)
 
         # ------------ Centrado de Ventana en pantalla ------------
