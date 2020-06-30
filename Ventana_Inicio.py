@@ -30,7 +30,7 @@ registro = Registro()
 class Programa:
     def __init__(self):
         self.titulo = "Sistema de ventas"
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 
