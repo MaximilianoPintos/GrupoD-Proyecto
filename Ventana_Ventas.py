@@ -27,7 +27,7 @@ class Ventas:
 
     def __init__(self, *args, **kwargs):
         self.titulo = "Ventas"
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 
