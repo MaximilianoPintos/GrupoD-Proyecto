@@ -14,7 +14,7 @@ date = datetime.datetime.now() # Fecha/Hora
 class Reportes:
     def __init__(self):
         self.titulo = "Reportes"
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         self.resizable = False
         self.color = "#83D6A8"
 
