@@ -12,7 +12,7 @@ class Movimientos:
         movimientos.config(bg="#83D6A8")
         movimientos.resizable(0, 0)
         movimientos.title("Ultimos movimientos")
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         movimientos.iconbitmap(self.icono)
 
         # ------------ Centrado de Ventana en pantalla ------------
