@@ -11,7 +11,7 @@ class Proveedores:
     def Inicio(self):
         # Ventana principal                                                
         ventana = Tk()
-        self.icono = "@/home/martin/Escritorio/GrupoD-Proyecto/Iconos/Registradora.xbm"
+        self.icono = "@../GrupoD-Proyecto/Iconos/Registradora.xbm"
         ventana.iconbitmap(self.icono)
         ventana.resizable(0,0)
         ventana.config(bg = "#83D6A8")
