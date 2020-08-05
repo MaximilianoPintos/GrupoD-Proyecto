@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+
 from tkinter import *
 import sqlite3
 from Ventana_Inicio import *
@@ -15,6 +16,7 @@ import PIL
 from PIL import Image
 from PIL import ImageTk
 
-#####
+## Ejecutador ##
+
 programa = Programa()
 programa.Inicio()
